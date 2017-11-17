@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "babel-core": "",
+    "babel-loader": "",
+    "babel-preset-es2015": "",
+    "babel-preset-react": "",
+    "prop-types": "^15.5.10",
+    "react": "",
+    "react-dom": "",
+    "webpack": ""
+  },
+  "dependencies": {
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2"
+  }
+}

@@ -1,0 +1,95 @@
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.block {
+  display: block;
+}
+.inlineBlock {
+  display: inline-block;
+}
+.sizeFull {
+  width: 100%;
+  height: 100%;
+}
+.sizeFullWidth {
+  width: 100%;
+}
+.sizeFullHeight {
+  height: 100%;
+}
+.okFatherSearch {
+  position: fixed;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.okFatherSearch .okContentMoveSearch {
+  position: relative;
+  top: 20%;
+  right: 50%;
+  bottom: 50%;
+  left: 50%;
+  background: url(https://cdns.007vin.com/img/p_tongzhimessage.png) no-repeat center center;
+  border-radius: 6px;
+  height: 295px;
+  width: 360px;
+  background-size: 360px 295px;
+}
+.okFatherSearch .okContentMoveSearch .okMessageClose {
+  position: absolute;
+  width: 37px;
+  height: 30px;
+  right: 0;
+  top: 0;
+  border-radius: 17px;
+}
+.okFatherSearch .okContentMoveSearch .okMessageSearch {
+  position: relative;
+  font-size: 14px;
+  color: #666666;
+  width: 92%;
+  height: calc(60% - 8%);
+  line-height: 25px;
+  text-align: center;
+  top: 56px;
+  left: 6px;
+  padding: 4% 2%;
+  text-indent: 2em;
+  overflow: auto;
+}
+.okFooterLeftSearch,
+.okFooterRightSearch {
+  position: absolute;
+  bottom: 17px;
+  color: #666666;
+  font-size: 14px;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 2px;
+}
+.okFooterLeftSearch {
+  left: 35px;
+  border: 1px solid #D8D8D8;
+}
+.okFooterRightSearch {
+  right: 35px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #1AA0F3;
+  border: 1px solid #1AA0F3;
+}
+.okFooterLeftSearch:hover,
+.okFooterRightSearch:hover {
+  color: #666666;
+}

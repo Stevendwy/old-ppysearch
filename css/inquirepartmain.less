@@ -1,0 +1,81 @@
+.container-list{
+    margin:10px;
+    .brand-show{
+        height: 60px;
+        display: flex;
+        justify-content:flex-end;
+    }
+    .list-container{
+        border: 1px solid #d8d8d8;
+        .list-head{
+            height: 40px;
+            display: flex;
+            background: #F2F2F2;
+            // box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.20);
+            div{
+                text-align: center;
+                font-size: 14px;
+                color: #333333;
+                line-height: 40px;
+            }
+        }
+        .list-body{
+            // border: 1px solid #D8D8D8;
+            .listitems{
+                background: #FFFFFF;
+                height: auto;
+                transition: .2s all linear;
+                .listitem{
+                    display: inline-block;
+                    padding: 10px 0;
+                    font-size: 14px;
+                    text-align: center;
+                    position: relative;
+                    .hasMore{
+                        position: absolute;
+                        top: 0;
+                        right: -15px;
+                    }
+                    .ControlBubble{
+                        display: none;
+                        background-image: url(https://cdns.007vin.com/img/icon_xinghaof.png);
+                        width: 106px;
+                        right: 60px;
+                        top: 0;
+                        background-size: 105% 100%;
+                        position: absolute;
+                        line-height: 10px;
+                        border-radius: 4px;
+                        display: none;
+                        z-index: 1;
+                        height: auto;
+                        padding: 3px 5px 2px 5px;
+
+                    }
+                }
+                .isBuble{
+                    &:hover{
+                        .ControlBubble{
+                            display: block;
+                        }
+                    }
+                }
+                .toSee{
+                   &:hover{
+                        color:#1AA0F3;
+                    }
+                }
+                &:hover{
+                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+                    margin-bottom: 2px;
+                    margin-left: 4px;
+                    width: 99%
+
+                }
+            }
+            .red{
+                color:#FF3333;
+            }
+        }
+    }
+}

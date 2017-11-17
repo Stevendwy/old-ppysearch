@@ -1,0 +1,63 @@
+@import "base";
+@activeColor: #1AA0F3;
+@fontColor : #666;
+@borderColor :#d8d8d8;
+@fontSize : 10px;
+
+.clearHrefOfA{
+    a{
+      color:@fontColor;
+      text-decoration:none;                        
+    }
+    a:hover, a:visited, a:link, a:active {
+      color:@fontColor            
+    }
+}
+.clickButton{
+        height: 44px;
+        background: #fff;
+        margin-top: 4px;
+        text-align: center;
+        line-height: 44px;
+        border-radius: 4px;
+}
+.FixedContainer {
+    .fixed;
+    .position(auto,13px,64px,auto);
+    width: 40px;
+    font-size: @fontSize;
+    z-index: 3;
+    .clearHrefOfA;
+    .EleMainItem {
+        background: #fff;
+        box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.40);
+        border-radius: 4px;
+        .clearHrefOfA;
+        .ElevatorItem {
+            color: @fontColor;
+            height: 40px;
+            display: flex;
+            padding:0 8px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 1px solid @borderColor;
+        }
+    }
+    .FoldItem {
+        .clickButton;
+        background:url("https://cdns.007vin.com/img/icon_liebiao.png") no-repeat -4px 0;
+        &:hover{
+            background:url("https://cdns.007vin.com/img/icon_liebiaodian.png") no-repeat -4px 0;
+        }
+    }
+    .ToTopItem {
+        .clickButton;
+        background: url(https://cdns.007vin.com/img/icon_top.png) no-repeat -2px 0;
+        &:hover{
+           background: url(https://cdns.007vin.com/img/icon_topdian.png) no-repeat 0px 0;
+        }
+        
+    }
+}
+

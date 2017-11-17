@@ -1,0 +1,231 @@
+.NmiddleLeft{
+	float: left;
+}
+.UserPay{
+	margin-top: 20px;
+}
+.NmiddleRight{
+	width: 843px;
+	height: 504px;
+	background: #fff;
+	float: right;
+}
+.PayTop{
+	height: 244px;
+	width: 540px;
+	margin: 0 auto;
+}
+.DayCard{
+	float: left;
+}
+.YearCard{
+	float:right;
+}
+.GreenBackGround,.BlueBackground{
+	width: 200px;
+	height: 204px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.GreenBackGround{
+	background: url(../img/p_green.png);
+}
+.BlueBackground{
+	background: url(../img/p_blue.png);
+}
+.GreenBackGround .FristSpan,.BlueBackground .FristSpan{
+	font-size: 20px;
+}
+.GreenBackGround .SecondSpan,.BlueBackground .SecondSpan{
+	font-size: 28px;
+}
+.GreenBackGround .LastSpan,.BlueBackground .LastSpan{
+	font-size: 14px;
+}
+.IconDay,.IconYear{
+	width: 20px;
+	height: 20px;
+	margin: 20px auto;
+	background: url(../img/p_dian.png) no-repeat;
+}
+.CenterMsg{
+    width: 802px;
+    height: 169px;
+    margin: 63px auto 10px;
+    border: 1px solid #d8d8d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#666;
+    justify-content: center;
+}
+.CenterMsg b{
+	margin: 5px;
+}
+.CenterMsg span{
+	font-size: 14px;
+	color:#666;
+}
+.CenterMsg ol{
+	list-style-type: disc;
+    width: 79px;
+    color: #979797;
+    margin: 10px;
+}
+.PayBody{
+	position: relative;
+}
+.toPayContainer{
+	position: absolute;
+    bottom: 13px;
+    right: 34px;
+    width: 160px;
+}
+.NeedPrice{
+	color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.NeedPrice>span{
+	color: #FF9238;
+    font-size: 28px;
+}
+.toNewPayContainer{
+	width: 160px;
+    height: 32px;
+    background: #FF7300;
+    border-radius: 4px;
+    color: #fff;
+    padding-top: 13ppx;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+}
+.toNewPayContainer:hover{
+	background:#FF9238;
+}
+.Nmiddlecontent{
+	position: relative;
+}
+.UserPayment{
+	position: absolute;
+	top:0;
+	background: #F1F1F1;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+.PaymentHead{
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #333333;
+}
+.PaymentHead>span{
+	color:#FF3232;
+}
+.PaymentBody{
+	width: 1024px;
+    height: 395px;
+    margin: 0 auto;
+    background: #fff;
+    background: rgba(255,255,255,0.90);
+    border-radius: 4px;
+}
+.PaymentBodyHead{
+	height: 40px;
+}
+.PaymentBodyHead>div{
+	background: #7ED321;
+    width: 110px;
+    height: 40px;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+}
+.PaymentBodyHead>span{
+	float: left;
+    width: 147px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+}
+.PaymentBodyMain{
+	 display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.PaymentBodyMain>p{
+	font-size: 14px;
+	color: #333333;
+}
+
+.PaymentBodyMain>b{
+	font-size: 18px;
+	color: #333333;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.PaymentBodyMain>span{
+	font-size: 14px;
+	color: #333333;
+}
+
+.PaymentBodyMain>p>span{
+	color:#FF3232;
+}
+
+.PaymentBodyMain>div>ol{
+	list-style-type: disc;
+    width: 100px;
+    font-size: 14px;
+    color: #999999;
+}
+
+.Dcode{
+	background: #FFFFFF;
+	border: 1px solid #D8D8D8;
+	border-radius: 4px;
+	text-align: center;
+	height: 140px;
+	width: 140px;
+}
+.Dcode>img{
+	width: 120px;
+	height: 120px;
+	margin: 10px;
+}
+
+
+.EndTime{
+	font-size: 14px;
+	color: #666666;
+}
+.msgModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 160px;
+    height: 110px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.80);
+    border-radius: 8px;
+}

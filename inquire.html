@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>零零汽-专业汽配查询平台</title>
+    <link rel="stylesheet" type="text" href="https://cdns.007vin.com/css/base.min.css"/>
+    <script>
+        var canverauth = "" //问题反馈
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/inquire.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/bubble.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/inquiretop.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/inquiremiddle.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/inquirebottom.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/userpay.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/inquireparts.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/cardetailmiddle.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/cardetailbottom.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/inquirevincontent.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/floatwindow.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/common.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/center.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/base.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/inquirevin.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/fixeddiv.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/feedback.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/dialog.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/okbtn.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/okbtnsearch.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/sliderscenter.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/verificationwindows.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/inquirepart.css">
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/inquirepartmain.min.css">
+    <!-- 		<script id="version" src="/js/versionCode.js?v=321v" type="text/javascript" charset="utf-8"></script> -->
+    <script src="https://cdns.007vin.com/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdns.007vin.com/js/utilsinquire.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/sliders.min.css"/> -->
+    <link rel="stylesheet" type="text/css" href="https://cdns.007vin.com/css/gtconfig.min.css"/>
+    <link rel="shortcut icon" href="https://cdns.007vin.com/img/logo.ico"/>
+    <style type="text/css">
+        @media only screen and (max-width: 1024px) {
+            .MiddleContentContainer .MiddleContent, .MiddleContentHead .MiddleHeadCenter {
+                left: 0;
+            }
+        }
+
+        .useragreement {
+            width: 100%;
+            height: calc(100% - 40px);
+            background-color: white;
+            overflow-y: scroll;
+            padding-top: 20px;
+        }
+
+        .useragreement > p {
+            text-align: left;
+        }
+
+        .isNoPic {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .isNoPic .MiddleBottomListItemTitle {
+            max-height: 100px;
+        }
+
+        .MiddleBottomListContainer .isLowHeight {
+            height: 100px;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <div id="searching"
+         style="position: fixed;bottom:0;left:0;width: 390px;height: 20px;background:#D8D8D8;color:#333;line-height: 20px;padding-left: 20px;font-size: 10px;display: none;">
+        searching搜索中…
+    </div>
+    <div id="container-gt">
+        <div id="content-gt">
+            <div id="title-gt"><span>尊敬的用户，因您的查询过于频繁，</span><span>您需要点击下方按钮进行验证，</span><span>验证通过即可继续查询。</span></div>
+            <div id="play-gt"></div>
+        </div>
+    </div>
+    <script>
+        var isNoPic = true; //兰博基尼特殊车型生成样式标识
+        var isPart = false; //零件号查询添加键盘事件
+        var isCar = false;	//车型查询确定
+        $("body").on("click", ".container-left .listhead-item", function () {
+            if ($(this).find("div").hasClass('plus')) {
+                $(this).parents(".listhead-list").find(".listhead-item").show();
+                $(this).find(".plus").removeClass("plus").addClass("minus")
+            } else if ($(this).find("div").hasClass('minus')) {
+                $(this).parents(".listhead-list").find(".listhead-item").hide();
+                $(this).show();
+                $(this).find(".minus").removeClass("minus").addClass("plus")
+            }
+        })
+    </script>
+    <script src="https://cdns.007vin.com/js/html2canvas.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdns.007vin.com/js/drawDom.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdns.007vin.com/js/less.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdns.007vin.com/js/utilsinquire.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdns.007vin.com/js/inquire.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdns.007vin.com/js/gt.js"></script>
+    <script src="https://cdns.007vin.com/js/gtconfig.js"></script>
+</body>
+</html>

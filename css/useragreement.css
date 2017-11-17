@@ -1,0 +1,16 @@
+.useragreement {
+	padding-top: 20px;
+	height: calc(100% - 40px);
+	background-color: white;
+	overflow-y: scroll;
+	text-align: center;
+}
+
+div {
+	text-align: center;
+}
+
+p {
+	text-align: left;
+	padding: 0 10px;
+}

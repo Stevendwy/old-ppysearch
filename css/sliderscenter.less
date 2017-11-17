@@ -1,0 +1,145 @@
+@import './base';
+
+.container_sliders {
+    width: 742px;
+    height: 454px;
+    overflow-x: hidden;
+
+    @keyframes lastStart2 {
+        from {
+            left: -2226px;
+        }
+        to {
+            left: -1484px;
+        }
+    }
+
+    @keyframes lastStart1 {
+        from {
+            left: -1484px;
+        }
+        to {
+            left: -742px;
+        }
+    }
+
+    @keyframes lastStart0 {
+        from {
+            left: -742px;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    @keyframes nextStart0 {
+        from {
+            left: -742px;
+        }
+        to {
+            left: -1484px;
+        }
+    }
+
+    @keyframes nextStart1 {
+        from {
+            left: -1484px;
+        }
+        to {
+            left: -2226px;
+        }
+    }
+
+    @keyframes nextStart2 {
+        from {
+            left: 0;
+        }
+        to {
+            left: -742px;
+        }
+    }
+
+    .nextStart0 {
+        animation: nextStart0 0.3s forwards;
+    }
+
+    .nextStart1 {
+        animation: nextStart1 0.3s forwards;
+    }
+
+    .nextStart2 {
+        animation: nextStart2 0.3s forwards;
+    }
+
+    .lastStart0 {
+        animation: lastStart0 0.3s forwards;
+    }
+
+    .lastStart1 {
+        animation: lastStart1 0.3s forwards;
+    }
+
+    .lastStart2 {
+        animation: lastStart2 0.3s forwards;
+    }
+
+    .container_imgs {
+        .relative;
+        height: 100%;
+        left: 0px;
+        display: flex;
+        width: 3710px;
+        img{
+         width: 742px;
+         height: 454px;
+        }
+    }
+    
+    button {
+        .absolute;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        border: 0;
+        outline: none;
+    }
+
+    .last {
+        left: 10px;
+        background: url("https://cdns.007vin.com/img/p_wo.png") 0 320px;
+    }
+    .last:active {
+        background: url("https://cdns.007vin.com/img/p_wo.png") 0 360px;
+    }
+
+    .next {
+        right: 10px;
+        background: url("https://cdns.007vin.com/img/p_wo.png") 0 240px;
+    }
+    .next:active {
+        right: 10px;
+        background: url("https://cdns.007vin.com/img/p_wo.png") 0 280px;
+    }
+
+    .container_paginations {
+        .absolute;
+        width: 100%;
+        left: 0;
+        bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .pagination {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            margin: 0 10px;
+            background-color: white;
+        }
+
+        .blue {
+            background-color: #1aa0f3;
+        }
+    }
+}
